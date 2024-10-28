@@ -14,3 +14,29 @@
     se monge -> no ataque exibir (usou artes marciais)  
     se ninja -> no ataque exibir (usou shuriken)
 */
+
+class Heroi{
+    constructor(nome, idade, tipoHeroi){
+        this.nome = nome
+        this.idade = idade
+        this.tipoHeroi = tipoHeroi
+    }
+
+    atacar(){
+        var ataque = ''
+        if(this.tipoHeroi === 'Mago'){
+            ataque = 'Magia'
+        } else if(this.tipoHeroi === 'Guerreiro'){
+            ataque = 'Espada'
+        } else if(this.tipoHeroi === 'Monge'){
+            ataque = 'Artes Marciais'
+        } else {
+            ataque = 'Shuriken'
+        }
+
+        return console.log(`O guerreiro ${this.nome} do tipo ${this.tipoHeroi} atacou usando ${ataque}.`)
+    }
+}
+
+var novoHeroi = new Heroi("Aurora", 25, "Mago")
+novoHeroi.atacar()
